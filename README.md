@@ -1,1 +1,14 @@
-IyMgSGkgdGhlcmUg8J+RiwoKSSdtIFNhbXVlbCBTdWNoYXJkLiBXZWxjb21lIHRvIG15IEdpdEh1YiBwcm9maWxlIQoKIyMg8J+MsSBDdXJyZW50bHkgbGVhcm5pbmcKCi0gR2l0IGFuZCBHaXRIdWIgd29ya2Zsb3dzCi0gQnVpbGRpbmcgd2Vic2l0ZXMgd2l0aCBIVE1MIGFuZCBDU1MKCiMjIOKaoSBGdW4gZmFjdAoKQWRkIGEgZnVuIGZhY3QgYWJvdXQgeW91cnNlbGYgaGVyZSEKCvCfk6sgTW9yZSBjb21pbmcgc29vbiB2aWEgbXkgcG9ydGZvbGlvIHNpdGUuCg==
+## Hi there 👋
+
+I'm Samuel Suchard. Welcome to my GitHub profile!
+
+## 🌱 Currently learning
+
+- Git and GitHub workflows
+- Building websites with HTML and CSS
+
+## ⚡ Fun fact
+
+Add a fun fact about yourself here!
+
+📫 More coming soon on my portfolio site: https://srsuchard.github.io/srsuchard/
