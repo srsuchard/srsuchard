@@ -4,140 +4,135 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Samuel Suchard</title>
-  <meta name="description" content="Samuel Suchard: student, coder, and builder.">
+  <meta name="description" content="Samuel Suchard builds software, surfs, sails, and practices Taekwondo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b1020;
-      --bg-glow: #1b2a6b;
-      --card: #141b34;
-      --border: #263057;
-      --text: #e8ecf8;
-      --muted: #9aa4c7;
-      --accent: #5eead4;
-      --accent-2: #818cf8;
+      --glass: #edf3f1;
+      --ink: #0a2533;
+      --swell: #1b7f8c;
+      --flag: #ff5a1f;
+      --rule: #b9cdd0;
+      --muted: #46606b;
     }
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #f5f7ff;
-        --bg-glow: #dbe3ff;
-        --card: #ffffff;
-        --border: #dde3f5;
-        --text: #141a33;
-        --muted: #5a6385;
-        --accent: #0f9d8a;
-        --accent-2: #4f46e5;
+        --glass: #0a2533;
+        --ink: #e6f0ee;
+        --swell: #5cc3cf;
+        --flag: #ff7a45;
+        --rule: #24485a;
+        --muted: #9db8bf;
       }
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "Inter", system-ui, sans-serif;
-      color: var(--text);
-      background: radial-gradient(900px 500px at 70% -10%, var(--bg-glow), transparent), var(--bg);
-      background-repeat: no-repeat;
-      line-height: 1.65;
+      background: var(--glass);
+      color: var(--ink);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.125rem;
+      line-height: 1.7;
     }
-    .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1.25rem; }
+    .wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+    a { color: var(--ink); text-decoration-color: var(--flag); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    a:hover { color: var(--flag); }
+    a:focus-visible { outline: 3px solid var(--flag); outline-offset: 3px; }
 
-    header { padding: 5rem 0 3rem; }
-    .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
-    h1 {
-      font-size: clamp(2.6rem, 8vw, 4.5rem);
-      font-weight: 800;
+    h1, h2, h3, .log dt, .nav a {
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
       line-height: 1.05;
-      margin: .5rem 0 1rem;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
     }
-    .lead { font-size: 1.2rem; color: var(--muted); max-width: 38rem; margin: 0 0 1.75rem; }
-    .buttons { display: flex; gap: .75rem; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; padding: .65rem 1.2rem; border-radius: 999px;
-      font-weight: 600; text-decoration: none; border: 1px solid var(--border);
-      color: var(--text); transition: transform .15s, border-color .15s;
-    }
-    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
-    .btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #0b1020; border: none; }
 
-    section { padding: 2.5rem 0; }
-    h2 { font-size: 1.6rem; margin: 0 0 1.25rem; }
-    h2::after { content: ""; display: block; width: 3rem; height: 3px; margin-top: .5rem; border-radius: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
-    p { margin: 0 0 1rem; }
+    .nav { display: flex; gap: 1.5rem; padding: 1.5rem 0; font-size: 1rem; font-weight: 500; }
+    .nav a { text-decoration: none; color: var(--muted); }
+    .nav a:hover { color: var(--flag); }
 
-    .tags { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .9rem; }
-    .tag {
-      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
-      padding: 1rem 1.1rem; display: flex; gap: .75rem; align-items: center;
-      transition: transform .15s, border-color .15s;
+    header { padding: 5rem 0 0; }
+    h1 {
+      font-size: clamp(3.4rem, 15vw, 8.5rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin: 0;
     }
-    .tag:hover { transform: translateY(-3px); border-color: var(--accent-2); }
-    .tag .emoji { font-size: 1.5rem; }
-    .tag small { display: block; color: var(--muted); }
+    h1 span { display: block; }
+    h1 span:last-child { color: var(--swell); }
+    .lead { font-size: 1.4rem; max-width: 30rem; margin: 1.5rem 0 0; }
 
-    .project {
-      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
-      padding: 1.75rem; position: relative; overflow: hidden;
-    }
-    .project::before {
-      content: ""; position: absolute; inset: 0 auto 0 0; width: 4px;
-      background: linear-gradient(var(--accent), var(--accent-2));
-    }
-    .project h3 { margin: 0 0 .5rem; font-size: 1.35rem; }
-    .pill { display: inline-block; font-size: .75rem; font-weight: 600; padding: .2rem .65rem; border-radius: 999px; border: 1px solid var(--border); color: var(--accent); margin-bottom: .75rem; }
+    .wave { display: block; width: 100%; height: 5rem; margin: 2.5rem 0 0; overflow: visible; }
+    .wave path { fill: none; stroke: var(--flag); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2400; stroke-dashoffset: 2400; animation: draw 2.4s ease-out .2s forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
 
-    footer { padding: 3rem 0 4rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); margin-top: 2rem; }
-    a { color: var(--accent); }
-    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } html { scroll-behavior: auto; } }
+    section { padding: 3.5rem 0 1rem; }
+    h2 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 1.25rem; }
+    p { margin: 0 0 1.1rem; max-width: 36rem; }
+
+    .build { border-left: 6px solid var(--swell); padding-left: 1.5rem; }
+    .build h3 { font-size: 2.4rem; font-weight: 800; margin: 0 0 .75rem; letter-spacing: -0.02em; }
+    .build .status { font-family: "Bricolage Grotesque", sans-serif; font-weight: 500; color: var(--flag); }
+
+    .log { margin: 0; border-top: 2px solid var(--ink); }
+    .log div { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--rule); }
+    .log dt { font-size: 1.25rem; font-weight: 800; }
+    .log dd { margin: 0; color: var(--muted); }
+    .log dd strong { color: var(--ink); font-weight: 600; }
+
+    footer { margin-top: 4rem; padding: 2rem 0 4rem; border-top: 2px solid var(--ink); color: var(--muted); font-size: 1rem; }
+
+    @media (max-width: 30rem) {
+      .log div { grid-template-columns: 1fr; gap: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wave path { animation: none; stroke-dashoffset: 0; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+    <nav class="nav" aria-label="Sections">
+      <a href="#building">Project</a>
+      <a href="#log">Log</a>
+      <a href="#about">About</a>
+    </nav>
+
     <header>
-      <div class="eyebrow">Student · Coder · Builder</div>
-      <h1>Samuel Suchard</h1>
-      <p class="lead">I enjoy technology, coding, and building things. I like turning ideas into working projects and figuring out why they break.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#project">See my project</a>
-        <a class="btn" href="https://github.com/srsuchard">GitHub</a>
-      </div>
+      <h1><span>Samuel</span><span>Suchard</span></h1>
+      <p class="lead">I build software, then figure out why it broke.</p>
+      <svg class="wave" viewBox="0 0 800 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 40 C 50 0, 100 0, 150 40 S 250 80, 300 40 S 400 0, 450 40 S 550 80, 600 40 S 700 0, 750 40 S 780 80, 800 60"/>
+      </svg>
     </header>
 
-    <section id="about">
-      <h2>About me</h2>
-      <p>I'm curious, determined, and always looking for something new to build or learn. I'm interested in computer science, entrepreneurship, and technology, and I learn best by building things.</p>
-      <p>Years of Taekwondo taught me discipline and patience, and the habit of sticking with something even when it's hard.</p>
-    </section>
-
-    <section id="interests">
-      <h2>Interests</h2>
-      <div class="tags">
-        <div class="tag"><span class="emoji">💻</span><div>Coding<small>Software development</small></div></div>
-        <div class="tag"><span class="emoji">🚀</span><div>Entrepreneurship<small>Tech and startups</small></div></div>
-        <div class="tag"><span class="emoji">🏄</span><div>Surfing<small>8 years</small></div></div>
-        <div class="tag"><span class="emoji">⛵</span><div>Sailing<small>On the water</small></div></div>
-        <div class="tag"><span class="emoji">🍳</span><div>Cooking<small>In the kitchen</small></div></div>
-        <div class="tag"><span class="emoji">🥋</span><div>Taekwondo<small>Second-degree black belt</small></div></div>
-      </div>
-    </section>
-
-    <section id="project">
-      <h2>A project I'm proud of</h2>
-      <div class="project">
-        <span class="pill">In progress</span>
+    <section id="building">
+      <h2>What I'm building</h2>
+      <div class="build">
         <h3>StudyOS</h3>
-        <p>A student-focused platform I'm building to help students organize their classes, assignments, and schoolwork.</p>
-        <p>This site is another small project: plain HTML and CSS, hosted on GitHub Pages.</p>
+        <p>A platform that helps students keep track of their classes, assignments, and schoolwork in one place.</p>
+        <p class="status">In progress</p>
       </div>
+    </section>
+
+    <section id="log">
+      <h2>Off-screen log</h2>
+      <dl class="log">
+        <div><dt>Taekwondo</dt><dd><strong>Second-degree black belt.</strong> Many years of training.</dd></div>
+        <div><dt>Surfing</dt><dd><strong>8 years</strong> in the water.</dd></div>
+        <div><dt>Sailing</dt><dd>On the water.</dd></div>
+        <div><dt>Cooking</dt><dd>In the kitchen.</dd></div>
+        <div><dt>Business</dt><dd>Interested in entrepreneurship and how technology companies start.</dd></div>
+      </dl>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm curious and determined. I learn best by building something and working out why it breaks.</p>
+      <p>Taekwondo taught me discipline and patience, and to keep working at something when it gets hard. I want to bring that to computer science as I get older.</p>
     </section>
 
     <footer>
-      © 2026 Samuel Suchard · <a href="https://github.com/srsuchard">github.com/srsuchard</a>
+      Find my code on <a href="https://github.com/srsuchard">GitHub</a>.
     </footer>
   </div>
 </body>
