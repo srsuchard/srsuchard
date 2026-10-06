@@ -4,43 +4,141 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Samuel Suchard</title>
+  <meta name="description" content="Samuel Suchard: student, coder, and builder.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #222; background: #fafafa; }
-    h1 { margin-bottom: 0; }
-    .tagline { color: #666; margin-top: 0.25rem; }
-    section { margin-top: 2rem; }
-    a { color: #0b61d8; }
-    li { margin: 0.25rem 0; }
+    :root {
+      --bg: #0b1020;
+      --bg-glow: #1b2a6b;
+      --card: #141b34;
+      --border: #263057;
+      --text: #e8ecf8;
+      --muted: #9aa4c7;
+      --accent: #5eead4;
+      --accent-2: #818cf8;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f5f7ff;
+        --bg-glow: #dbe3ff;
+        --card: #ffffff;
+        --border: #dde3f5;
+        --text: #141a33;
+        --muted: #5a6385;
+        --accent: #0f9d8a;
+        --accent-2: #4f46e5;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--text);
+      background: radial-gradient(900px 500px at 70% -10%, var(--bg-glow), transparent), var(--bg);
+      background-repeat: no-repeat;
+      line-height: 1.65;
+    }
+    .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1.25rem; }
+
+    header { padding: 5rem 0 3rem; }
+    .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+    h1 {
+      font-size: clamp(2.6rem, 8vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin: .5rem 0 1rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lead { font-size: 1.2rem; color: var(--muted); max-width: 38rem; margin: 0 0 1.75rem; }
+    .buttons { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: .65rem 1.2rem; border-radius: 999px;
+      font-weight: 600; text-decoration: none; border: 1px solid var(--border);
+      color: var(--text); transition: transform .15s, border-color .15s;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #0b1020; border: none; }
+
+    section { padding: 2.5rem 0; }
+    h2 { font-size: 1.6rem; margin: 0 0 1.25rem; }
+    h2::after { content: ""; display: block; width: 3rem; height: 3px; margin-top: .5rem; border-radius: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+    p { margin: 0 0 1rem; }
+
+    .tags { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .9rem; }
+    .tag {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 1rem 1.1rem; display: flex; gap: .75rem; align-items: center;
+      transition: transform .15s, border-color .15s;
+    }
+    .tag:hover { transform: translateY(-3px); border-color: var(--accent-2); }
+    .tag .emoji { font-size: 1.5rem; }
+    .tag small { display: block; color: var(--muted); }
+
+    .project {
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      padding: 1.75rem; position: relative; overflow: hidden;
+    }
+    .project::before {
+      content: ""; position: absolute; inset: 0 auto 0 0; width: 4px;
+      background: linear-gradient(var(--accent), var(--accent-2));
+    }
+    .project h3 { margin: 0 0 .5rem; font-size: 1.35rem; }
+    .pill { display: inline-block; font-size: .75rem; font-weight: 600; padding: .2rem .65rem; border-radius: 999px; border: 1px solid var(--border); color: var(--accent); margin-bottom: .75rem; }
+
+    footer { padding: 3rem 0 4rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    a { color: var(--accent); }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
-  <h1>Samuel Suchard</h1>
-  <p class="tagline">Student, coder, and builder.</p>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Student · Coder · Builder</div>
+      <h1>Samuel Suchard</h1>
+      <p class="lead">I enjoy technology, coding, and building things. I like turning ideas into working projects and figuring out why they break.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#project">See my project</a>
+        <a class="btn" href="https://github.com/srsuchard">GitHub</a>
+      </div>
+    </header>
 
-  <section>
-    <h2>About me</h2>
-    <p>Hi, I'm Samuel Suchard. I enjoy technology, coding, and building things. I like turning ideas into working projects and figuring out why they break. I'm curious, determined, and always looking for something new to build or learn.</p>
-  </section>
+    <section id="about">
+      <h2>About me</h2>
+      <p>I'm curious, determined, and always looking for something new to build or learn. I'm interested in computer science, entrepreneurship, and technology, and I learn best by building things.</p>
+      <p>Years of Taekwondo taught me discipline and patience, and the habit of sticking with something even when it's hard.</p>
+    </section>
 
-  <section>
-    <h2>Interests</h2>
-    <ul>
-      <li>Computers, coding, and software development</li>
-      <li>Entrepreneurship and technology</li>
-      <li>Surfing (8 years) and sailing</li>
-      <li>Cooking</li>
-      <li>Taekwondo: second-degree black belt</li>
-    </ul>
-  </section>
+    <section id="interests">
+      <h2>Interests</h2>
+      <div class="tags">
+        <div class="tag"><span class="emoji">💻</span><div>Coding<small>Software development</small></div></div>
+        <div class="tag"><span class="emoji">🚀</span><div>Entrepreneurship<small>Tech and startups</small></div></div>
+        <div class="tag"><span class="emoji">🏄</span><div>Surfing<small>8 years</small></div></div>
+        <div class="tag"><span class="emoji">⛵</span><div>Sailing<small>On the water</small></div></div>
+        <div class="tag"><span class="emoji">🍳</span><div>Cooking<small>In the kitchen</small></div></div>
+        <div class="tag"><span class="emoji">🥋</span><div>Taekwondo<small>Second-degree black belt</small></div></div>
+      </div>
+    </section>
 
-  <section>
-    <h2>A project I'm proud of</h2>
-    <p><strong>StudyOS</strong> is a student-focused platform I'm building to help students organize their classes, assignments, and schoolwork. This site is another small project: plain HTML and CSS hosted on GitHub Pages.</p>
-  </section>
+    <section id="project">
+      <h2>A project I'm proud of</h2>
+      <div class="project">
+        <span class="pill">In progress</span>
+        <h3>StudyOS</h3>
+        <p>A student-focused platform I'm building to help students organize their classes, assignments, and schoolwork.</p>
+        <p>This site is another small project: plain HTML and CSS, hosted on GitHub Pages.</p>
+      </div>
+    </section>
 
-  <section>
-    <h2>Find me</h2>
-    <p><a href="https://github.com/srsuchard">github.com/srsuchard</a></p>
-  </section>
+    <footer>
+      © 2026 Samuel Suchard · <a href="https://github.com/srsuchard">github.com/srsuchard</a>
+    </footer>
+  </div>
 </body>
 </html>
