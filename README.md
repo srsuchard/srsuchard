@@ -10,6 +10,7 @@
 
 <!-- Badges: shields.io (https://shields.io) -->
 <p align="center">
+  <a href="https://www.pacificachristian.org/"><img src="https://img.shields.io/badge/Pacifica_Christian-Seawolves-0B3D91?style=for-the-badge&logo=bookstack&logoColor=white" alt="Pacifica Christian"/></a>
   <a href="https://srsuchard.github.io/"><img src="https://img.shields.io/badge/Portfolio-samuel.dev-0B3D91?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio"/></a>
   <a href="https://studyos-neon-phi.vercel.app/"><img src="https://img.shields.io/badge/StudyOS-Live-00B4D8?style=for-the-badge&logo=vercel&logoColor=white" alt="StudyOS"/></a>
   <a href="mailto:samuel.suchard@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
@@ -22,6 +23,7 @@
 ```js
 const samuel = {
   role: "Student developer",
+  school: "Pacifica Christian High School 🐺",
   building: "StudyOS",
   makes: ["Apps", "Tools", "3D-printed hardware"],
   stack: ["TypeScript", "Next.js", "React", "Swift", "Python"],
