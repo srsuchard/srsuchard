@@ -24,6 +24,7 @@
 const samuel = {
   role: "Student developer",
   school: "Pacifica Christian High School 🐺",
+  grade: "9th (Class of 2030)",
   building: "StudyOS",
   makes: ["Apps", "Tools", "3D-printed hardware"],
   stack: ["TypeScript", "Next.js", "React", "Swift", "Python"],
